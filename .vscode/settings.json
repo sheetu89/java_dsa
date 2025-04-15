@@ -1,0 +1,18 @@
+{
+    "java.debug.settings.onBuildFailureProceed": true,
+    "java.project.sourcePaths": [
+        "1. Fundamental",
+        "2. Array",
+        "3. Array2D",
+        "4. Complexity Analysis",
+        "5. Recursion",
+        "6. Sorting",
+        "7. Searching",
+        "8. String",
+        "9. OOP",
+        "10. LinkedList",
+        "11. Stack",
+        "12. Queue",
+        "."
+    ]
+}
