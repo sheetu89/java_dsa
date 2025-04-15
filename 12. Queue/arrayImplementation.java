@@ -61,6 +61,7 @@ public class arrayImplementation {
             System.out.print("Queue: ");
             for (int i = f; i <= r; i++) {
                 System.out.print(arr[i] + " ");
+                
             }
             System.out.println();
         }
