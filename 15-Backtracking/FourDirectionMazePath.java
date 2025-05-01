@@ -8,7 +8,7 @@ public class FourDirectionMazePath {
 
     private static void print(int sr, int sc, int er, int ec, String s, boolean[][] visited) {
         // Out of bounds or already visited
-        if (sr < 1 || sc < 1 || sr > er || sc > ec || visited[sr][sc]) {
+        if (sr < 0 || sc < 0 || sr > er || sc > ec || visited[sr][sc]) {
             return;
         }
 
@@ -29,4 +29,4 @@ public class FourDirectionMazePath {
         // Backtrack: Unmark the current cell
         visited[sr][sc] = false;
     }
-}
+ }
