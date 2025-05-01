@@ -12,7 +12,6 @@ public class printPath {
             System.out.println(s);
             return;
         }
-
         // Recursive calls
         print(sr + 1, sc, er, ec, s + "D"); // down
         print(sr, sc + 1, er, ec, s + "R"); // right
