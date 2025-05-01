@@ -26,7 +26,6 @@ public class FourDirectionMazePath {
         print(sr - 1, sc, er, ec, s + "U", visited); // up
         print(sr, sc + 1, er, ec, s + "R", visited); // right
         print(sr, sc - 1, er, ec, s + "L", visited); // left
-
         // Backtrack: Unmark the current cell
         visited[sr][sc] = false;
     }
