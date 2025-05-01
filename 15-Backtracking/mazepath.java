@@ -1,5 +1,4 @@
-public class mazepath {
-
+public class Mazepath {
     public static void main(String[] args) {
         int rows = 2;
         int cols = 2;
