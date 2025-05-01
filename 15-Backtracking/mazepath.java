@@ -1,5 +1,3 @@
-
-
 public class mazepath {
 
     public static void main(String[] args) {
