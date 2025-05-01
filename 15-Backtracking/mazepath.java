@@ -9,8 +9,7 @@ public class Mazepath {
     }
 
     private static int maze(int startRow, int startCol, int endRow, int endCol) {
-        if (startRow > endRow || startCol > endCol)
-            return 0;
+        if (startRow > endRow || startCol > endCol) return 0;
         if (startRow == endRow && startCol == endCol)
             return 1; // base case
         int downWays = maze(startRow + 1, startCol, endRow, endCol);
