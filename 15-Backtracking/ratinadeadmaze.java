@@ -6,38 +6,31 @@
 
 public class ratinadeadmaze {
     public static void main(String[] args) {
+        int rows = 4;
+        int cols = 4;
         int[][] maze = {
-                {1, 0, 0, 0},
-                {1, 1, 0, 1},
-                {0, 1, 0, 0},
-                {1, 1, 1, 1}
-        };
-        int n = maze.length;
-        boolean[][] visited = new boolean[n][n]; // Tracks visited cells
-        System.out.println("Paths from source to destination:");
-        print(maze, 0, 0, "", visited, n);
+                {1, 1, 1, 1},
+                {1, 0, 1, 1},
+                {0, 1, 1, 1},
+                {1, 1, 0, 1}};
+        // Call the print method to find paths
+        print(maze, 0, 0, rows - 1, cols - 1, "");
     }
 
-    private static void print(int[][] maze, int sr, int sc, String path, boolean[][] visited, int n) {
+    private static void print(int[][] maze, int sr, int sc, int er, int ec, String S) {
         // Out of bounds or invalid cell
-        if (sr < 0 || sc < 0 || sr >= n || sc >= n || maze[sr][sc] == 0 || visited[sr][sc]) {
+        if (sr > er || sc > ec || maze[sr][sc] == 0) {
             return;
         }
 
         // Base case: Reached the destination
-        if (sr == n - 1 && sc == n - 1) {
-            System.out.println(path);
+        if (sr == er && sc == ec) {
+            System.out.println(S);
             return;
         }
 
-        // Mark the current cell as visited
-        visited[sr][sc] = true;
-
         // Recursive calls for possible moves
-        print(maze, sr + 1, sc, path + "D", visited, n); // Move Down
-        print(maze, sr, sc + 1, path + "R", visited, n); // Move Right
-
-        // Backtrack: Unmark the current cell
-        visited[sr][sc] = false;
+        print(maze, sr + 1, sc, er, ec, S + "D"); // Move Down
+        print(maze, sr, sc + 1, er, ec, S + "R"); // Move Right
     }
 }
